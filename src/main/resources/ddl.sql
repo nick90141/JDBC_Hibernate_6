@@ -1,0 +1,24 @@
+USE library;
+
+DELETE FROM author WHERE id > 6;
+
+ALTER TABLE author AUTO_INCREMENT = 6;
+
+-- CREATE DATABASE library;
+
+USE library;
+
+DROP TABLE author;
+DROP TABLE book;
+
+CREATE TABLE author
+(
+    id INT(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    name VARCHAR(45)
+);
+CREATE TABLE book
+(
+    id INT(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    name VARCHAR(45),
+    author_id INT(11)
+);
